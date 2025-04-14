@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Order Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <h2>Online Order Form</h2>
+
+    <label for="name">Customer Name:</label>
+    <input type="text" id="name" name="Customer Name" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="Phone Number" required>
+
+    <label for="product">Select Product:</label>
+    <select id="product" name="Product" required>
+      <option value="">--Choose a product--</option>
+      <option value="Product A">Product A</option>
+      <option value="Product B">Product B</option>
+      <option value="Product C">Product C</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="Quantity" required min="1">
+
+    <label for="address">Delivery Address:</label>
+    <textarea id="address" name="Delivery Address" rows="4" required></textarea>
+
+    <label for="notes">Special Instructions:</label>
+    <textarea id="notes" name="Special Notes" rows="3"></textarea>
+
+    <button type="submit">Submit Order</button>
+  </form>
+
+</body>
+</html>
