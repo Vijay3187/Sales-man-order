@@ -74,7 +74,8 @@
         quantity: document.getElementById("quantity").value
       };
 
-      fetch("https://script.google.com/macros/s/AKfycbw0i11xtKCqrw_sVhqUZsxHOhDAcuMcO6ulygpcoDkz80FIsvBJ_MyBJRALOPz10B-V/exec", {
+      action=("https://script.google.com/macros/s/AKfycbw0i11xtKCqrw_sVhqUZsxHOhDAcuMcO6ulygpcoDkz80FIsvBJ_MyBJRALOPz10B-V/exec", 
+       {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
